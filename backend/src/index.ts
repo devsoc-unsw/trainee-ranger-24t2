@@ -1,5 +1,6 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
+import { AccessError, InputError } from './error';
 
 const PORT = 5000;
 
@@ -10,9 +11,26 @@ app.use(cors({
     },
     credentials: true
 }));
+app.use(express.json());
+
+const errorHandler = (fn: (req: Request, res: Response, next: NextFunction) => Promise<void>) =>
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      await fn(req, res, next);
+    } catch (error) {
+      if (error instanceof InputError) {
+        res.status(400).send({ error: error.message });
+      } else if (error instanceof AccessError) {
+        res.status(403).send({ error: error.message });
+      } else {
+        console.log(error);
+        res.status(500).send({ error: 'Internal Server Error' });
+      }
+    }
+  };
 
 app.get('/', (req, res) => {
-    res.send("Hello world!");
+    res.json("Hello world!");
 });
 
 app.get('/message', (req, res) => {
