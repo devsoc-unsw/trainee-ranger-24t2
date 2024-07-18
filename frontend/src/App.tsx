@@ -3,12 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// Dummy button to test imports
+import SomeButton from './components/SomeButton'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
+        {/* Testing component import */}
+        <SomeButton/>
+
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
