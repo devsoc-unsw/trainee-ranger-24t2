@@ -6,8 +6,9 @@ const SomeButton = () => {
 
 //   let c = 0;
   const increase = (c: number) => {
-    console.log(c + 1);
-    c++;
+    // console.log(c + 1);
+    // c++;
+    setCount(c + 1);
   }
 
   return (
