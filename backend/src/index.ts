@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import { AccessError, InputError } from './error';
 import { MongoClient } from 'mongodb';
+import { login, register } from './service';
 // import mongoose from 'mongoose';
 
 const PORT = 5000;
@@ -42,6 +43,21 @@ app.get('/message', (req, res) => {
   res.json({ message: "Hello Shrek (Trek)!" });
 });
 
+app.post('/auth/login', 
+  errorHandler(async (req, res) => {
+    const {email, password} = req.body;
+    const token = await login(email, password);
+    res.json(token);
+  }),
+)
+
+app.post('/auth/register',
+  errorHandler(async (req, res) => {
+    const {email, password, name} = req.body;
+    const token = await register(email, password, name);
+    res.json(token);
+  }),
+)
 connectDB();
 
 // Unmatched routes
