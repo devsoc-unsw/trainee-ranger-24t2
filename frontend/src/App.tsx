@@ -4,6 +4,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import AuthPage from './pages/AuthPage'
+import Location from './pages/Location'
 import './App.css'
 
 // Dummy button to test imports
@@ -15,10 +16,11 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <SomeButton/>
+      {/* <SomeButton/> */}
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/auth' element={<AuthPage/>}/>
+        <Route path='/location' element={<Location/>}/>
       </Routes>
     </BrowserRouter>
       {/* <div> */}
