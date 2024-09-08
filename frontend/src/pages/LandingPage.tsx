@@ -8,6 +8,7 @@ const LandingPage = () => {
     <>
       <div>LandingPage (below is a button to navigate to the auth page)</div>
       <button onClick={() => navigate('/auth')}>To Auth</button>
+      <button onClick={() => navigate('/location')}>To location</button>
     </>
   )
 }
