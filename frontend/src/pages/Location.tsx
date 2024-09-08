@@ -10,7 +10,7 @@ const Location = () => {
   const [input, setInput] = useState('');
   const [locations, setLocations] = useState([]);
 
-  const updateInput = (e: any) => {
+  const updateInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
 
