@@ -1,0 +1,14 @@
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.auth-page h2 {
+  margin-bottom: 20px;
+}
