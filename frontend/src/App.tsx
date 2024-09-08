@@ -8,6 +8,8 @@ import Location from './pages/Location'
 import './App.css'
 
 // Dummy button to test imports
+// import SomeButton from './components/SomeButton'
+import CompletionScreen from './pages/CompletionScreen'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,9 +17,11 @@ function App() {
   return (
     <>
     <BrowserRouter>
+      {/* <SomeButton/> */}
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/auth' element={<AuthPage/>}/>
+        <Route path='/completion' element={<CompletionScreen/>}/>
         <Route path='/location' element={<Location/>}/>
       </Routes>
     </BrowserRouter>
