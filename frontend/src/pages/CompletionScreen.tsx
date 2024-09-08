@@ -1,9 +1,12 @@
 import React from 'react'
 import places from '../images/Placenames.jpg'
 import trek from '../images/trekss.png'
-import { Box, Button, Rating, styled } from '@mui/material'
+import { Rating, styled } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 const CompletionScreen = () => {
+  const navigate = useNavigate();
+
   const BackgroundImg = styled('div')({
     color: 'black', 
     backgroundImage: `url(${places})`, 
@@ -24,28 +27,80 @@ const CompletionScreen = () => {
     borderRadius: '10px', 
     backgroundColor: 'white', 
     cursor: 'pointer'
+  });
+
+  const WhiteCont = styled('div')({
+    paddingTop: '1vw', 
+    backgroundColor: 'white', 
+    justifyContent: 'flex-end', 
+    alignItems: 'center', 
+    width: '35vw', 
+    height: '75vh', 
+    borderRadius: '20px'
+  });
+
+  const CongratText = styled('p')({
+    textAlign: 'center', 
+    fontSize: '2.5vw', 
+    padding: '0 1em'
+  });
+
+  const AlignCont = styled('div')({
+    textAlign: 'center', 
+    alignItems: 'center'
+  });
+
+  const ImageContainer = styled('div')({
+    width: '28vw', 
+    height: '42vh', 
+    margin: 'auto', 
+    borderStyle: 'solid', 
+    borderColor: '#5edbff'
+  });
+
+  const MapImage = styled('img')({
+    padding: '0', 
+    backgroundRepeat: 'no-repeat', 
+    objectFit: 'cover', 
+    height: '80%', 
+    width: '100%'
+  });
+
+  const TrekText = styled('p')({
+    fontSize: '1.5vw', 
+    marginTop: '0em', 
+    padding: '1.3rem', 
+    backgroundColor: '#5edbff'
   })
+
+  const ButtonContainer = styled('p')({
+    backgroundColor: '#5edbff', 
+    display: 'flex', 
+    justifyContent: 'space-evenly', 
+    marginTop: '1vw', 
+    padding: '1vw 0'
+  });
 
   return (
     <BackgroundImg>
-      <div style={{backgroundColor: 'white', justifyContent: 'flex-end', alignItems: 'center', width: '35vw', height: '85vh', borderRadius: '20px'}}>
-        <p style={{textAlign: 'center', fontSize: '2.7rem', padding: '0 1em'}}>Congrats on finishing your Trek! 🥳</p>
+      <WhiteCont>
+        <CongratText>Congrats on finishing your Trek! 🥳</CongratText>
 
-        <div style={{textAlign: 'center', alignItems: 'center'}}>
-          <div style={{width: '28vw', height: '42vh', margin: 'auto', borderStyle: 'solid', borderColor: '#5edbff'}}>
-            <img src={trek} style={{padding: '0rem', backgroundRepeat: 'no-repeat', objectFit: 'cover', height: '20rem', width: '100%'}}/>
-            <p style={{fontSize: '1.5rem', marginTop: '0em', padding: '1em', backgroundColor: '#5edbff'}}>You Trekked ...km</p>
-          </div>
-          <Rating name='trek-rating' defaultValue={0.0} precision={0.1} sx={{marginTop: '0.1em', fontSize: '3rem', color: '#fdea2e'}}/>
-          <p style={{padding: '0'}}>Rate your Trek</p>
-        </div>
+        <AlignCont>
+          <ImageContainer>
+            <MapImage src={trek}/>
+            <TrekText>You Trekked 6.5km</TrekText>
+          </ImageContainer>
+          <Rating name='trek-rating' defaultValue={0.0} precision={0.1} sx={{marginTop: '1rem', fontSize: '2vw', color: '#fdea2e'}}/>
+          <p>Rate your Trek</p>
+        </AlignCont>
 
-        <div style={{backgroundColor: '#5edbff', display: 'flex', justifyContent: 'space-evenly', padding: '2em 0'}}>
+        <ButtonContainer>
           <CompletionButton>Share</CompletionButton>
-          <CompletionButton>Home</CompletionButton>
+          <CompletionButton>Home</CompletionButton> {/* To navigate to the dashboard/home page */}
           <CompletionButton>Next Trip</CompletionButton>
-        </div>
-      </div>
+        </ButtonContainer>
+      </WhiteCont>
     </BackgroundImg>
         // <img src={places} style={{backgroundRepeat: 'no-repeat', backgroundSize: 'auto'}}>
         //   <p>Hi</p>
