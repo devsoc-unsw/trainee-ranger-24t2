@@ -12,7 +12,7 @@ const tripData = [
 const RightSection: React.FC = () => {
   return (
     <div className="right-section">
-      <h2>Your Last 4 Trips</h2>
+      <h2>Your Most Recent Trips</h2>
       <div className="trip-cards">
         {tripData.map((trip) => (
           <div key={trip.id} className="trip-card">
