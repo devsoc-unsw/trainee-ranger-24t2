@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import AuthPage from './pages/AuthPage'
 import Location from './pages/Location'
+import Dashboard from './pages/Dashboard';
+
 import './App.css'
 
 // Dummy button to test imports
@@ -23,6 +25,7 @@ function App() {
         <Route path='/auth' element={<AuthPage/>}/>
         <Route path='/completion' element={<CompletionScreen/>}/>
         <Route path='/location' element={<Location/>}/>
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
       {/* <div> */}
