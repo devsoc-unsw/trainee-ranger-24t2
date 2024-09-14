@@ -39,6 +39,7 @@ const AuthPage = () => {
   };
 
   return (
+    <Box sx={{ background: 'linear-gradient(#64dafe, white)', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <Container className="auth-page">
       <Paper elevation={3} sx={{ padding: 4, backgroundColor: 'white', borderRadius: 2, width: '30%', minWidth: '300px', textAlign: 'center' }}>
         <Box component="form" noValidate autoComplete="off">
@@ -105,6 +106,7 @@ const AuthPage = () => {
         </Box>
       </Paper>
     </Container>
+    </Box>
   );
 };
 
