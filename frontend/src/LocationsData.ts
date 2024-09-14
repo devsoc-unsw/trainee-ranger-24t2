@@ -1,7 +1,33 @@
 import { Locations } from "./types";
 
-const locations: Locations[] = [
-
+const LocationData: Locations[] = [
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Kinokuniya', country: 'Australia', rating: 10},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
+    {label: 'Sydney Opera House', country: 'Australia', rating: 7},
 ];
 
-export default locations;
+export default LocationData;

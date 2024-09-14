@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import searchIcon from '../images/search.svg';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Autocomplete, styled, TextField } from '@mui/material';
-import locations from '../LocationsData';
+import { Autocomplete, styled, TextField, Button } from '@mui/material';
+import LocationData from '../LocationsData';
 
 const AUTH = '';
 
@@ -52,6 +52,7 @@ const Location = () => {
   return (
     <> 
     <Background>
+      <h1 style={{ fontFamily: 'serif', textAlign: 'center', paddingTop: '1rem' }}>Choose your locations and places</h1>
       <header className="search-bar__container">
         <button style={{ cursor: 'pointer' }} onClick={() => navigate('/dashboard')}>
           Go Back
@@ -80,10 +81,16 @@ const Location = () => {
       </div>
       <Autocomplete
         disablePortal
-        options={locations}
+        options={LocationData}
         sx={{width: '50%', margin: '0 auto', backgroundColor: 'white'}}
         renderInput={(params) => <TextField {...params} label="Locations" />}
       />
+
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh', marginTop: '2rem'}}>
+        <Button sx={{textAlign: 'center', width: '20%', height: '80%', backgroundColor: 'green'}} variant='contained' onClick={() => navigate('/completion')}>
+          Complete Trek
+        </Button>
+      </div>
     </Background>
     </>
   )

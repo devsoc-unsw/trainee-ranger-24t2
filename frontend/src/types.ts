@@ -1,5 +1,5 @@
 export type Locations = {
-    name: string,
+    label: string,
     country: string,
     rating: number
 }
