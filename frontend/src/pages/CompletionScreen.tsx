@@ -97,8 +97,8 @@ const CompletionScreen = () => {
 
         <ButtonContainer>
           <CompletionButton>Share</CompletionButton>
-          <CompletionButton>Home</CompletionButton> {/* To navigate to the dashboard/home page */}
-          <CompletionButton>Next Trip</CompletionButton>
+          <CompletionButton onClick={() => navigate('/dashboard')}>Home</CompletionButton> {/* To navigate to the dashboard/home page */}
+          <CompletionButton onClick={() => navigate('/location')}>Next Trip</CompletionButton>
         </ButtonContainer>
       </WhiteCont>
     </BackgroundImg>
